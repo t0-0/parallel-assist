@@ -10,6 +10,7 @@ tmp_dir=$5
 file_list=$(ssh $1 "find $2 -type f | xargs ls -S --quoting-style=shell-always")
 if [ $? -ne 0 ]; then
     echo "must check remote_name or remote_dir"
+    exit 1
 fi
 
 [ -d ${tmp_dir} ] && echo "${tmp_dir} must not exist" && exit 1
