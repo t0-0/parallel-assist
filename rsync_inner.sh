@@ -10,7 +10,7 @@ elif [ -z ${local_dir} ]; then
     exit 1
 fi
 
-read -r -a file_array <<<$file_str
+file_array=($file_str)
 
 for ((i = ${OMPI_COMM_WORLD_RANK}; i < ${#file_array[@]}; i += $((2 * ${OMPI_COMM_WORLD_SIZE})))); do
     file_name=${file_array[i]}

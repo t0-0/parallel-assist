@@ -18,7 +18,7 @@ else
     exit 1
 fi
 
-read -r -a tmp_array <<<$tmp_str
+tmp_array=($tmp_str)
 
 file_array=()
 

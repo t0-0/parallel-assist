@@ -10,7 +10,7 @@ fi
 
 cd "${dest_dir}" || exit 1
 
-read -r -a file_array <<<$file_str
+file_array=($file_str)
 
 files_to_handle=()
 
